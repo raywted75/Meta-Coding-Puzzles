@@ -1,0 +1,54 @@
+direction: right
+
+states: {
+  s: "1, 1"
+
+  s0: "C[0], 1"
+  s0.style.stroke: "#FFF275"
+
+  s10: "C[1], 1"
+  s10.style.stroke: "#FFF275"
+  s11: "C[1], C[0]"
+  s11.style.stroke: "#FF8C42"
+
+  s20: "C[2], 1"
+  s20.style.stroke: "#FFF275"
+  s21: "C[2], C[0]"
+  s21.style.stroke: "#FF8C42"
+  s22: "C[2], C[1]"
+  s22.style.stroke: "#FF3C38"
+
+  s30: "C[3], 1"
+  s30.style.stroke: "#FFF275"
+  s31: "C[3], C[0]"
+  s31.style.stroke: "#FF8C42"
+  s32: "C[3], C[1]"
+  s32.style.stroke: "#FF3C38"
+  s33: "C[3], C[2]"
+  s33.style.stroke: "#A23E48"
+
+  s -> s0
+
+  s0 -> s10
+  s0 -> s11
+
+  s10 -> s20
+  s10 -> s22
+  s11 -> s21
+  s11 -> s22
+
+  s20 -> s30
+  s21 -> s31
+  s22 -> s32
+  s20 -> s33
+  s21 -> s33
+  s22 -> s33
+}
+
+state positions: {
+  near: bottom-center
+  index 0.style.stroke: "#FFF275"
+  index 1.style.stroke: "#FF8C42"
+  index 2.style.stroke: "#FF3C38"
+  index 3.style.stroke: "#A23E48"
+}
